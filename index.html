@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niggerland's Art Gallery</title>
+    <title>Adam's Art Gallery</title>
+    <link rel="icon" href="https://example.com/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background-color: #f4f4f4;
         }
         header {
             background-color: #222;
@@ -21,6 +24,7 @@
             display: flex;
             justify-content: center;
             background-color: #333;
+            flex-wrap: wrap;
         }
         nav a {
             color: white;
@@ -46,12 +50,20 @@
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 10px;
+            gap: 20px;
+            padding: 20px;
         }
         .gallery img {
             width: 100%;
             height: auto;
             border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
         }
         footer {
             background-color: #222;
@@ -60,11 +72,47 @@
             padding: 10px 0;
             margin-top: 20px;
         }
+        /* Lightbox Styles */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+        }
+        .lightbox:target {
+            display: flex;
+        }
+        /* Close Button */
+        .lightbox .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            nav a {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Niggerlands's Art Gallery</h1>
+        <h1>Adam's Art Gallery</h1>
         <p>Explore the world through my creative lens.</p>
     </header>
     <nav>
@@ -79,11 +127,18 @@
     <section id="gallery" class="container">
         <h2>Gallery</h2>
         <div class="gallery">
-            <img src="https://www.popsci.com/wp-content/uploads/2024/11/large-turkeys-pardon.jpg" alt="Artwork 1">
-            <img src="https://cdn.discordapp.com/attachments/607468089553977354/1312727407521697862/paul_walker_and_boone_by_paulwalkerdedication_d8krbre-fullview.png?ex=6752d22b&is=675180ab&hm=71703025240e9367fe4c9b396b601d22ba5f052f3572f6f49a2636405c46af40&" alt="Artwork 2">
-            <img src="https://cdn.discordapp.com/attachments/607468089553977354/1313161273944444978/26038427-1733152357.png?ex=675314bd&is=6751c33d&hm=a584a9476ff589d0da7c1b5ca3826cef5229727d691c92dd5097568a75115a41&" alt="Artwork 3">
-            <img src="https://cdn.discordapp.com/attachments/607468089553977354/1312902476642390067/ISS-NEOWISE-SEAN-DORAN_1_1024.png?ex=6752cc76&is=67517af6&hm=4f48b408470dd0961e3351df5d72d4cdcd1106794448937698d17b23c2e79cb6&" alt="Artwork 4">
-            <!-- Add more images as needed -->
+            <a href="#lightbox1">
+                <img src="https://www.popsci.com/wp-content/uploads/2024/11/large-turkeys-pardon.jpg" alt="Artwork 1">
+            </a>
+            <a href="#lightbox2">
+                <img src="https://cdn.discordapp.com/attachments/607468089553977354/1312727407521697862/paul_walker_and_boone_by_paulwalkerdedication_d8krbre-fullview.png" alt="Artwork 2">
+            </a>
+            <a href="#lightbox3">
+                <img src="https://cdn.discordapp.com/attachments/607468089553977354/1313161273944444978/26038427-1733152357.png" alt="Artwork 3">
+            </a>
+            <a href="#lightbox4">
+                <img src="https://cdn.discordapp.com/attachments/607468089553977354/1312902476642390067/ISS-NEOWISE-SEAN-DORAN_1_1024.png" alt="Artwork 4">
+            </a>
         </div>
     </section>
     <section id="about" class="container">
@@ -99,5 +154,23 @@
     <footer>
         <p>&copy; 2024 Adam's Art Gallery. All Rights Reserved.</p>
     </footer>
+
+    <!-- Lightbox Modal for each image -->
+    <div id="lightbox1" class="lightbox">
+        <span class="close" onclick="window.location.hash='';">&times;</span>
+        <img src="https://www.popsci.com/wp-content/uploads/2024/11/large-turkeys-pardon.jpg" alt="Artwork 1">
+    </div>
+    <div id="lightbox2" class="lightbox">
+        <span class="close" onclick="window.location.hash='';">&times;</span>
+        <img src="https://cdn.discordapp.com/attachments/607468089553977354/1312727407521697862/paul_walker_and_boone_by_paulwalkerdedication_d8krbre-fullview.png" alt="Artwork 2">
+    </div>
+    <div id="lightbox3" class="lightbox">
+        <span class="close" onclick="window.location.hash='';">&times;</span>
+        <img src="https://cdn.discordapp.com/attachments/607468089553977354/1313161273944444978/26038427-1733152357.png" alt="Artwork 3">
+    </div>
+    <div id="lightbox4" class="lightbox">
+        <span class="close" onclick="window.location.hash='';">&times;</span>
+        <img src="https://cdn.discordapp.com/attachments/607468089553977354/1312902476642390067/ISS-NEOWISE-SEAN-DORAN_1_1024.png" alt="Artwork 4">
+    </div>
 </body>
 </html>
