@@ -16,6 +16,7 @@
     <meta name="twitter:description" content="Welcome to Osso Magazine, your destination for the best creative work and inspiration.">
     <meta name="twitter:image" content="https://imgur.com/y2ee2ri.png">
     <meta name="twitter:site" content="@osso_magazine">
+
     <title>Osso Magazine - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="https://imgur.com/O4wcDfV.png">
@@ -60,24 +61,24 @@
             color: #f39c12;
         }
 
-        nav .social-icons a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            background-color: white;
-            border-radius: 50%;
-            margin-left: 10px;
-            color: #121212;
-            font-size: 1rem;
-            text-decoration: none;
-            transition: background-color 0.3s ease, color 0.3s ease;
+        .social-icons {
+            display: flex;
+            gap: 10px;
         }
 
-        nav .social-icons a:hover {
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #121212;
+            padding: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
             background-color: #f39c12;
-            color: white;
         }
 
         .hero {
@@ -196,8 +197,12 @@
             <a href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
             <div class="social-icons">
-                <a href="https://www.instagram.com/ossomagazine/" target="_blank" aria-label="Instagram">📷</a>
-                <a href="https://x.com/osso_magazine" target="_blank" aria-label="Twitter">✖️</a>
+                <a href="https://www.instagram.com/ossomagazine/" target="_blank">
+                    <img src="https://imgs.search.brave.com/Rc78o56j5u_3UTro6q-YVykyAqwIVFzw5DPUEYuR0DU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODBiNTdmY2Q5OTk2/ZTI0YmM0M2M1MjEu/cG5n" alt="Instagram">
+                </a>
+                <a href="https://x.com/osso_magazine" target="_blank">
+                    <img src="https://imgs.search.brave.com/gc8CdHtiJqGj6FqWhv5MeZX4GWJsuxR1UROrU3zrOj8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vS2J3VFhL/QnN2SWozcUlvQnhC/TmlOeHh4eVMyRjJ4/anFNbkNIWDJrMDFT/SS9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTlw/Yldkei9Mbk5sWVhK/amFDNWljbUYyL1pT/NWpiMjB2ZDAxcU1F/ZDUvU1dWaWF6aFZZ/Vk5KY1hOWS9Sakpo/Ym14T1dFWnBWVEZD/L05FRkZUM1ZMYW0x/cllrTm8vTUM5eWN6/cG1hWFE2TlRZdy9P/ak15TURveE9qQXZa/enBqL1pTOWhTRkl3/WTBoTk5reDUvT1do/WmJUa3hMMlJETlRC/ay9NbXd3WkVkV2VV/eHRUbll2L1lsTTVh/bUl5TlRCYVZ6VXcv/VERKU2FDOWlVemxv/V1cwNS9NV1JETVRC/a01td3dMMlJIL1Zu/bE1NMmQyV1c1S2FH/SnQvVVhRdlpFYzVk/bUpIZEhCay9Remx6/WWpKa2RpOU1WMHB6/L1dWZE9ja3h1UW5W/YWVUVXcvTDJReWJI/UmFlVFI0VDFSSi9k/MHh1UW5VdlduYy5q/cGVn" alt="Twitter/X">
+                </a>
             </div>
         </nav>
     </header>
