@@ -3,78 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Adam's Art Gallery</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://example.com/favicon.png">
+    <title>Osso Magazine - About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://imgur.com/O4wcDfV.png">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f4f4f4;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfdfd;
+            color: #333;
         }
+
         header {
-            background-color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #121212;
+            padding: 20px 40px;
             color: white;
-            padding: 20px;
-            text-align: center;
         }
+
+        header img {
+            height: 60px;
+            border-radius: 50%; /* Makes the logo circular */
+            overflow: hidden;
+        }
+
         nav {
             display: flex;
-            justify-content: center;
-            background-color: #333;
+            gap: 20px;
         }
+
         nav a {
             color: white;
-            padding: 14px 20px;
             text-decoration: none;
-            text-align: center;
+            font-weight: 600;
+            transition: color 0.3s ease;
         }
+
         nav a:hover {
-            background-color: #575757;
+            color: #f39c12;
         }
+
         .container {
-            padding: 20px;
             max-width: 800px;
             margin: auto;
-        }
-        h2 {
-            color: #333;
+            padding: 40px 20px;
             text-align: center;
         }
-        p {
-            color: #555;
-            line-height: 1.6;
-            margin: 10px 0;
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
         footer {
-            background-color: #222;
+            background-color: #121212;
             color: white;
             text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            margin: 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>About Me</h1>
+        <img src="https://imgur.com/O4wcDfV.png" alt="Osso Magazine Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+        </nav>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="about.html">About</a>
-    </nav>
+
     <section class="container">
-        <h2>Welcome to My World of Art</h2>
-        <p>Hello! My name is Adam, and I am a 16-year-old artist with a passion for capturing the essence of the world through my creativity. From a young age, I’ve always loved expressing myself through various forms of art, and my journey has been one of exploration and growth.</p>
-        <p>My artwork spans multiple styles and mediums, including [insert specific techniques, like digital painting, sketching, or abstract design]. Each piece I create is a reflection of my unique perspective and the emotions I strive to convey.</p>
-        <p>When I’m not immersed in my art, I enjoy [list hobbies or interests, e.g., "coding, gaming, and spending time with friends."]. My goal is to inspire others and make a meaningful impact through my creations.</p>
-        <p>Thank you for visiting my gallery. I hope you enjoy exploring my work as much as I enjoyed creating it!</p>
+        <h1>About Me</h1>
+        <p>Hello! Welcome to Osso Magazine. My name is Adam, and I’m passionate about sharing creative and inspiring works through this platform. Art, design, and storytelling are my passions, and this website is a culmination of my journey so far.</p>
+        <p>Through Osso Magazine, I aim to highlight unique pieces of art and create a space for like-minded individuals to explore and share their creativity. Feel free to reach out and connect with me. Thank you for being a part of this journey!</p>
     </section>
+
     <footer>
-        <p>&copy; 2024 Adam's Art Gallery. All Rights Reserved.</p>
+        <p>&copy; 2024 Osso Magazine. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
