@@ -3,42 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam's Art Gallery</title>
+    <title>Osso Magazine - Featured Gallery</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://scontent-sea1-1.cdninstagram.com/v/t51.2885-19/19428862_1880284458892047_4741115811375087616_a.jpg?stp=dst-jpg_tt6&_nc_ht=scontent-sea1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=9a6J0tDwv58Q7kNvgG8ygvl&_nc_gid=68686cd647fd4a71ae4dfd0c5bec2027&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AYDWCsVX99UqXAx_INzpuUqORsrGSZxOmUV8ptpXZ_dQdw&oe=6757DAB5&_nc_sid=7a9f4b">
+    <link rel="icon" href="ossologo.jpg">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f4f4f4;
+            background-color: #f8f8f8;
+            color: #333;
         }
         header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             background-color: #222;
+            padding: 10px 20px;
             color: white;
-            padding: 20px;
-            text-align: center;
+        }
+        header img {
+            height: 40px;
         }
         nav {
             display: flex;
-            justify-content: center;
-            background-color: #333;
+            gap: 15px;
         }
         nav a {
             color: white;
-            padding: 14px 20px;
             text-decoration: none;
-            text-align: center;
+            font-weight: bold;
+            padding: 5px 10px;
         }
         nav a:hover {
-            background-color: #575757;
+            background-color: #444;
+            border-radius: 5px;
         }
         .hero {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 60vh;
+            height: 50vh;
             background: url('https://framerusercontent.com/images/ZrVSH0GtWvDrRaCXNH9OBn2BkU.png') no-repeat center center/cover;
             color: white;
             text-shadow: 2px 2px 5px #000;
@@ -69,38 +75,41 @@
             background-color: #222;
             color: white;
             text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
+            padding: 15px 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Adam's Art Gallery</h1>
-        <p>Explore the world through my creative lens.</p>
+        <img src="ossologo.jpg" alt="Osso Magazine Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+        </nav>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="about.html">About</a>
-    </nav>
     <section class="hero">
-        <h1>Welcome to My Art World</h1>
+        <h1>Welcome to Osso Magazine</h1>
     </section>
     <section class="container">
         <h2>Featured Gallery</h2>
         <div class="featured-gallery">
-            <img src="https://www.popsci.com/wp-content/uploads/2024/11/large-turkeys-pardon.jpg" alt="Artwork 1">
-            <img src="https://cdn.discordapp.com/attachments/607468089553977354/1312727407521697862/paul_walker_and_boone_by_paulwalkerdedication_d8krbre-fullview.png" alt="Artwork 2">
-            <img src="https://cdn.discordapp.com/attachments/607468089553977354/1313161273944444978/26038427-1733152357.png" alt="Artwork 3">
-            <img src="https://cdn.discordapp.com/attachments/607468089553977354/1312902476642390067/ISS-NEOWISE-SEAN-DORAN_1_1024.png" alt="Artwork 4">
+            <a href="gallery.html#image1"><img src="https://www.popsci.com/wp-content/uploads/2024/11/large-turkeys-pardon.jpg" alt="Artwork 1"></a>
+            <a href="gallery.html#image2"><img src="https://cdn.discordapp.com/attachments/607468089553977354/1312727407521697862/paul_walker_and_boone_by_paulwalkerdedication_d8krbre-fullview.png" alt="Artwork 2"></a>
+            <a href="gallery.html#image3"><img src="https://cdn.discordapp.com/attachments/607468089553977354/1313161273944444978/26038427-1733152357.png" alt="Artwork 3"></a>
+            <a href="gallery.html#image4"><img src="https://cdn.discordapp.com/attachments/607468089553977354/1312902476642390067/ISS-NEOWISE-SEAN-DORAN_1_1024.png" alt="Artwork 4"></a>
+            <a href="gallery.html#image5"><img src="https://via.placeholder.com/300" alt="Artwork 5"></a>
+            <a href="gallery.html#image6"><img src="https://via.placeholder.com/300" alt="Artwork 6"></a>
+            <a href="gallery.html#image7"><img src="https://via.placeholder.com/300" alt="Artwork 7"></a>
+            <a href="gallery.html#image8"><img src="https://via.placeholder.com/300" alt="Artwork 8"></a>
+            <a href="gallery.html#image9"><img src="https://via.placeholder.com/300" alt="Artwork 9"></a>
         </div>
         <p style="text-align: center; margin-top: 20px;">
             <a href="gallery.html" style="text-decoration: none; color: #333; font-weight: bold;">View Full Gallery &rarr;</a>
         </p>
     </section>
     <footer>
-        <p>&copy; 2024 Adam's Art Gallery. All Rights Reserved.</p>
+        <p>&copy; 2024 Osso Magazine. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
