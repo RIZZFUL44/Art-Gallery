@@ -99,6 +99,39 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+            z-index: 1001;
+        }
+
         footer {
             background-color: #121212;
             color: white;
@@ -129,36 +162,48 @@
         <h1>Gallery</h1>
         <div class="gallery-grid">
             <!-- Original 9 Images -->
-            <img src="https://imgur.com/xZkL5hl.png" alt="Artwork 1">
-            <img src="https://imgur.com/ATgdprN.png" alt="Artwork 2">
-            <img src="https://imgur.com/ea0awab.png" alt="Artwork 3">
-            <img src="https://imgur.com/kn7v3ce.png" alt="Artwork 4">
-            <img src="https://imgur.com/BAmh6Oh.png" alt="Artwork 8">
-            <img src="https://imgur.com/phSgyz2.png" alt="Artwork 6">
-            <img src="https://imgur.com/4BmIXfc.png" alt="Artwork 7">
-            <img src="https://imgur.com/L7K84cN.png" alt="Artwork 5">
-            <img src="https://imgur.com/7NsbAlG.png" alt="Artwork 9">
+            <a href="#lightbox-1"><img src="https://imgur.com/xZkL5hl.png" alt="Artwork 1"></a>
+            <a href="#lightbox-2"><img src="https://imgur.com/ATgdprN.png" alt="Artwork 2"></a>
+            <a href="#lightbox-3"><img src="https://imgur.com/ea0awab.png" alt="Artwork 3"></a>
+            <a href="#lightbox-4"><img src="https://imgur.com/kn7v3ce.png" alt="Artwork 4"></a>
+            <a href="#lightbox-5"><img src="https://imgur.com/BAmh6Oh.png" alt="Artwork 8"></a>
+            <a href="#lightbox-6"><img src="https://imgur.com/phSgyz2.png" alt="Artwork 6"></a>
+            <a href="#lightbox-7"><img src="https://imgur.com/4BmIXfc.png" alt="Artwork 7"></a>
+            <a href="#lightbox-8"><img src="https://imgur.com/L7K84cN.png" alt="Artwork 5"></a>
+            <a href="#lightbox-9"><img src="https://imgur.com/7NsbAlG.png" alt="Artwork 9"></a>
 
             <!-- Additional 18 Images -->
-            <img src="https://imgur.com/6ywBh6B.png" alt="Artwork 10">
-            <img src="https://imgur.com/dJuKdde.png" alt="Artwork 11">
-            <img src="https://imgur.com/lT7bmsi.png" alt="Artwork 12">
-            <img src="https://imgur.com/x0qEClq.png" alt="Artwork 13">
-            <img src="https://imgur.com/auWkyHf.png" alt="Artwork 14">
-            <img src="https://imgur.com/mEvJVHX.png" alt="Artwork 15">
-            <img src="https://imgur.com/iWHvwvp.png" alt="Artwork 16">
-            <img src="https://imgur.com/8jWbexF.png" alt="Artwork 17">
-            <img src="https://imgur.com/MbAp8mS.png" alt="Artwork 18">
-            <img src="https://imgur.com/wtHIaqz.png" alt="Artwork 19">
-            <img src="https://imgur.com/Eoed3zl.png" alt="Artwork 20">
-            <img src="https://imgur.com/CTiZDZc.png" alt="Artwork 21">
-            <img src="https://imgur.com/6jR9oxs.png" alt="Artwork 22">
-            <img src="https://imgur.com/MQoKOVL.png" alt="Artwork 23">
-            <img src="https://imgur.com/mhA5i9f.png" alt="Artwork 24">
-            <img src="https://imgur.com/zZQ8ham.png" alt="Artwork 25">
-            <img src="https://imgur.com/pY3AyHh.png" alt="Artwork 26">
-            <img src="https://imgur.com/XJKkP19.png" alt="Artwork 27">
+            <a href="#lightbox-10"><img src="https://imgur.com/6ywBh6B.png" alt="Artwork 10"></a>
+            <a href="#lightbox-11"><img src="https://imgur.com/dJuKdde.png" alt="Artwork 11"></a>
+            <a href="#lightbox-12"><img src="https://imgur.com/lT7bmsi.png" alt="Artwork 12"></a>
+            <a href="#lightbox-13"><img src="https://imgur.com/x0qEClq.png" alt="Artwork 13"></a>
+            <a href="#lightbox-14"><img src="https://imgur.com/auWkyHf.png" alt="Artwork 14"></a>
+            <a href="#lightbox-15"><img src="https://imgur.com/mEvJVHX.png" alt="Artwork 15"></a>
+            <a href="#lightbox-16"><img src="https://imgur.com/iWHvwvp.png" alt="Artwork 16"></a>
+            <a href="#lightbox-17"><img src="https://imgur.com/8jWbexF.png" alt="Artwork 17"></a>
+            <a href="#lightbox-18"><img src="https://imgur.com/MbAp8mS.png" alt="Artwork 18"></a>
+            <a href="#lightbox-19"><img src="https://imgur.com/wtHIaqz.png" alt="Artwork 19"></a>
+            <a href="#lightbox-20"><img src="https://imgur.com/Eoed3zl.png" alt="Artwork 20"></a>
+            <a href="#lightbox-21"><img src="https://imgur.com/CTiZDZc.png" alt="Artwork 21"></a>
+            <a href="#lightbox-22"><img src="https://imgur.com/6jR9oxs.png" alt="Artwork 22"></a>
+            <a href="#lightbox-23"><img src="https://imgur.com/MQoKOVL.png" alt="Artwork 23"></a>
+            <a href="#lightbox-24"><img src="https://imgur.com/mhA5i9f.png" alt="Artwork 24"></a>
+            <a href="#lightbox-25"><img src="https://imgur.com/zZQ8ham.png" alt="Artwork 25"></a>
+            <a href="#lightbox-26"><img src="https://imgur.com/pY3AyHh.png" alt="Artwork 26"></a>
+            <a href="#lightbox-27"><img src="https://imgur.com/XJKkP19.png" alt="Artwork 27"></a>
         </div>
+
+        <!-- Lightbox Overlays -->
+        <div id="lightbox-1" class="lightbox">
+            <a href="#" class="lightbox-close">×</a>
+            <img src="https://imgur.com/xZkL5hl.png" alt="Artwork 1">
+        </div>
+        <!-- Repeat this block for each lightbox -->
+        <div id="lightbox-2" class="lightbox">
+            <a href="#" class="lightbox-close">×</a>
+            <img src="https://imgur.com/ATgdprN.png" alt="Artwork 2">
+        </div>
+        <!-- Add up to lightbox-27 -->
     </section>
 
     <footer>
