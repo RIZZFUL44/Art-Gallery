@@ -5,109 +5,176 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Osso Magazine - Featured Gallery</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://imgur.com/a/LGFNgK2">
+    <link rel="icon" href="ossologo.jpg">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f8f8f8;
-            color: #333;
         }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
         header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: #222;
-            padding: 10px 20px;
+            background-color: #121212;
+            padding: 20px 40px;
             color: white;
         }
+
         header img {
-            height: 40px;
+            height: 50px;
         }
+
         nav {
             display: flex;
-            gap: 15px;
+            gap: 20px;
         }
+
         nav a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
-            padding: 5px 10px;
+            font-weight: 700;
+            transition: color 0.3s ease;
         }
+
         nav a:hover {
-            background-color: #444;
-            border-radius: 5px;
+            color: #f39c12;
         }
+
+        /* Hero Section */
         .hero {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 50vh;
-            background: url('https://framerusercontent.com/images/ZrVSH0GtWvDrRaCXNH9OBn2BkU.png') no-repeat center center/cover;
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://framerusercontent.com/images/ZrVSH0GtWvDrRaCXNH9OBn2BkU.png') no-repeat center center/cover;
             color: white;
-            text-shadow: 2px 2px 5px #000;
-        }
-        .container {
+            text-align: center;
             padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero a {
+            background-color: #f39c12;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero a:hover {
+            background-color: #e67e22;
+        }
+
+        /* Featured Gallery Section */
+        .container {
+            padding: 40px 20px;
             max-width: 1200px;
             margin: auto;
         }
+
         .featured-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
+
         .featured-gallery img {
             width: 100%;
             height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .featured-gallery img:hover {
             transform: scale(1.05);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
+
+        .featured-gallery a {
+            text-decoration: none;
+        }
+
+        .featured-gallery a:hover img {
+            transform: scale(1.1);
+        }
+
+        .featured-gallery a:hover h3 {
+            color: #f39c12;
+        }
+
         footer {
-            background-color: #222;
+            background-color: #121212;
             color: white;
             text-align: center;
-            padding: 15px 0;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <img src="https://imgur.com/a/LGFNgK2" alt="Osso Magazine Logo">
+        <img src="ossologo.jpg" alt="Osso Magazine Logo">
         <nav>
             <a href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
             <a href="about.html">About</a>
         </nav>
     </header>
+
+    <!-- Hero Section -->
     <section class="hero">
         <h1>Welcome to Osso Magazine</h1>
+        <p>Your destination for the best creative work and inspiration.</p>
+        <a href="gallery.html">Explore the Full Gallery</a>
     </section>
+
+    <!-- Featured Gallery Section -->
     <section class="container">
-        <h2>Featured Gallery</h2>
+        <h2 style="text-align: center; margin-bottom: 40px;">Featured Gallery</h2>
         <div class="featured-gallery">
-            <a href="gallery.html#image1"><img src="https://www.popsci.com/wp-content/uploads/2024/11/large-turkeys-pardon.jpg" alt="Artwork 1"></a>
-            <a href="gallery.html#image2"><img src="https://cdn.discordapp.com/attachments/607468089553977354/1312727407521697862/paul_walker_and_boone_by_paulwalkerdedication_d8krbre-fullview.png" alt="Artwork 2"></a>
-            <a href="gallery.html#image3"><img src="https://cdn.discordapp.com/attachments/607468089553977354/1313161273944444978/26038427-1733152357.png" alt="Artwork 3"></a>
-            <a href="gallery.html#image4"><img src="https://cdn.discordapp.com/attachments/607468089553977354/1312902476642390067/ISS-NEOWISE-SEAN-DORAN_1_1024.png" alt="Artwork 4"></a>
+            <a href="gallery.html#image1"><img src="https://via.placeholder.com/300" alt="Artwork 1"></a>
+            <a href="gallery.html#image2"><img src="https://via.placeholder.com/300" alt="Artwork 2"></a>
+            <a href="gallery.html#image3"><img src="https://via.placeholder.com/300" alt="Artwork 3"></a>
+            <a href="gallery.html#image4"><img src="https://via.placeholder.com/300" alt="Artwork 4"></a>
             <a href="gallery.html#image5"><img src="https://via.placeholder.com/300" alt="Artwork 5"></a>
             <a href="gallery.html#image6"><img src="https://via.placeholder.com/300" alt="Artwork 6"></a>
             <a href="gallery.html#image7"><img src="https://via.placeholder.com/300" alt="Artwork 7"></a>
             <a href="gallery.html#image8"><img src="https://via.placeholder.com/300" alt="Artwork 8"></a>
             <a href="gallery.html#image9"><img src="https://via.placeholder.com/300" alt="Artwork 9"></a>
         </div>
-        <p style="text-align: center; margin-top: 20px;">
-            <a href="gallery.html" style="text-decoration: none; color: #333; font-weight: bold;">View Full Gallery &rarr;</a>
-        </p>
     </section>
+
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Osso Magazine. All Rights Reserved.</p>
     </footer>
