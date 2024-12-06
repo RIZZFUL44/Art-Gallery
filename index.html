@@ -76,6 +76,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 
 .hero::before {
@@ -85,11 +86,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    background: rgba(0, 0, 0, 0.4); /* Adjust opacity for text contrast */
     z-index: 1;
 }
-
-        }
 
 .hero h1 {
     font-family: 'Playfair Display', serif;
@@ -101,29 +100,32 @@
     width: fit-content; /* Ensures typing matches the text size */
     border-right: 2px solid #adb5bd;
     animation: typing 3.5s steps(30, end), blink 0.5s step-end 3.5s; /* Stops blink after typing */
+    z-index: 2; /* Ensure text appears above the overlay */
 }
 
+.hero p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    z-index: 2; /* Ensure text appears above the overlay */
+}
 
-        .hero p {
-            margin: 20px 0;
-            font-size: 1.2rem;
-            opacity: 0.8;
-        }
+.hero a {
+    padding: 15px 30px;
+    background-color: #007bff; /* Modern blue */
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 2; /* Ensure button appears above the overlay */
+}
 
-        .hero a {
-            padding: 15px 30px;
-            background-color: #007bff; /* Modern blue */
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 50px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
+.hero a:hover {
+    background-color: #0056b3; /* Darker blue */
+    transform: translateY(-5px);
+}
 
-        .hero a:hover {
-            background-color: #0056b3; /* Darker blue */
-            transform: translateY(-5px);
-        }
 
 @keyframes typing {
     from {
