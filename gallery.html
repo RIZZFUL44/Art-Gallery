@@ -10,15 +10,15 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #fdfdfd;
-            color: #333;
+            background-color: #f8f9fa; /* Modern light gray */
+            color: #212529; /* Dark gray */
         }
 
         header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: #121212;
+            background-color: #007bff; /* Sleek blue */
             padding: 20px 40px;
             color: white;
         }
@@ -44,14 +44,22 @@
         }
 
         nav a:hover {
-            color: #f39c12;
+            color: #ff6f61; /* Coral accent */
         }
 
-        nav .social-icons a img {
+        nav .social-icons img {
             width: 30px;
             height: 30px;
             border-radius: 50%;
+            background-color: white;
+            padding: 5px;
             cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        nav .social-icons img:hover {
+            transform: scale(1.1);
+            background-color: #ff6f61; /* Coral accent */
         }
 
         .container {
@@ -68,7 +76,7 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
 
@@ -97,16 +105,25 @@
             align-items: center;
             justify-content: center;
             z-index: 1000;
+            transition: opacity 0.3s ease, transform 0.3s ease;
         }
 
         .lightbox img {
             max-width: 90%;
             max-height: 80%;
             border-radius: 10px;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.3s ease, transform 0.3s ease;
         }
 
         .lightbox:target {
             display: flex;
+        }
+
+        .lightbox:target img {
+            opacity: 1;
+            transform: scale(1);
         }
 
         .lightbox-close {
@@ -120,7 +137,7 @@
         }
 
         footer {
-            background-color: #121212;
+            background-color: #007bff;
             color: white;
             text-align: center;
             padding: 20px 0;
@@ -129,6 +146,18 @@
         footer p {
             font-size: 0.9rem;
             margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
@@ -143,7 +172,7 @@
                     <img src="https://imgs.search.brave.com/Rc78o56j5u_3UTro6q-YVykyAqwIVFzw5DPUEYuR0DU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODBiNTdmY2Q5OTk2/ZTI0YmM0M2M1MjEu/cG5n" alt="Instagram">
                 </a>
                 <a href="https://x.com/osso_magazine" target="_blank">
-                    <img src="https://imgs.search.brave.com/B6vwk9ItpE_OLonUNPFsN6SwMzKcwjW-YXgCvf6jzog/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmVl/bG9nb3BuZy5jb20v/aW1hZ2VzL2FsbF9p/bWcvMTY5MDY0MzU5/MXR3aXR0ZXIteC1s/b2dvLXBuZy5wbmc" alt="Twitter/X">
+                    <img src="https://imgs.search.brave.com/B6vwk9ItpE_OLonUNPFsN6SwMzKcwjW-YXgCvf6jzog/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmVl/bG9nb3BuZy5jb20v/aW1hZ2VzL2FsbF9p/bWcvMTY5MDY0MzU5/MXR3aXR0ZXIteC1s/b2dvLXBuZy5wbmc" alt="Twitter">
                 </a>
             </div>
         </nav>
