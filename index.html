@@ -99,7 +99,7 @@
     overflow: hidden;
     max-width: 14ch; /* Limit to a specific character width */
     border-right: 2px solid #adb5bd;
-    animation: typing 3.5s steps(14, end), blink 0.5s step-end 3.5s; /* Stops blink after typing */
+    animation: typing 3s steps(14, end), blink 0.5s step-end 4s forwards; /* Cursor disappears after typing */
     z-index: 2; /* Ensure text appears above the overlay */
 }
 
@@ -131,7 +131,7 @@
         width: 0;
     }
     to {
-        width: 25ch; /* Matches the max-width of the h1 */
+        width: 14ch; /* Matches the max-width of the h1 */
     }
 }
 
