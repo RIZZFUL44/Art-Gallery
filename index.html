@@ -97,9 +97,9 @@
     letter-spacing: 2px;
     white-space: nowrap;
     overflow: hidden;
-    width: fit-content; /* Ensures typing matches the text size */
+    max-width: 25ch; /* Limit to a specific character width */
     border-right: 2px solid #adb5bd;
-    animation: typing 3.5s steps(30, end), blink 0.5s step-end 3.5s; /* Stops blink after typing */
+    animation: typing 3.5s steps(25, end), blink 0.5s step-end 3.5s; /* Stops blink after typing */
     z-index: 2; /* Ensure text appears above the overlay */
 }
 
@@ -126,13 +126,12 @@
     transform: translateY(-5px);
 }
 
-
 @keyframes typing {
     from {
         width: 0;
     }
     to {
-        width: 100%; /* Stops at the text's width */
+        width: 25ch; /* Matches the max-width of the h1 */
     }
 }
 
