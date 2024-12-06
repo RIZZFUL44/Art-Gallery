@@ -84,10 +84,11 @@
     letter-spacing: 2px;
     white-space: nowrap;
     overflow: hidden;
-    width: fit-content;
+    width: fit-content; /* Ensures typing matches the text size */
     border-right: 2px solid #adb5bd;
-    animation: typing 3.5s steps(30, end), blink 0.5s step-end 3.5s; /* Stops blink after typing ends */
+    animation: typing 3.5s steps(30, end), blink 0.5s step-end 3.5s; /* Stops blink after typing */
 }
+
 
         .hero p {
             margin: 20px 0;
@@ -115,16 +116,16 @@
         width: 0;
     }
     to {
-        width: 100%;
+        width: 100%; /* Stops at the text's width */
     }
 }
 
 @keyframes blink {
     0%, 50% {
-        border-color: #adb5bd;
+        border-color: #adb5bd; /* Cursor is visible */
     }
     100% {
-        border-color: transparent;
+        border-color: transparent; /* Cursor disappears */
     }
 }
 
