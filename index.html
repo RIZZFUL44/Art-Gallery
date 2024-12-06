@@ -18,14 +18,18 @@
     <meta name="twitter:site" content="@osso_magazine">
 
     <title>Osso Magazine - Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="icon" href="https://imgur.com/O4wcDfV.png">
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <style>
         body {
             margin: 0;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #fdfdfd;
             color: #333;
+            cursor: url('https://imgur.com/5fgTPXe.png'), auto;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         header {
@@ -83,19 +87,25 @@
 
         .hero {
             text-align: center;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://imgur.com/y2ee2ri.png') no-repeat center center/cover;
+            background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff6e6c);
             color: white;
             height: 70vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
 
         .hero h1 {
+            font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
             margin: 0;
             letter-spacing: 2px;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #f39c12;
+            animation: typing 3.5s steps(30, end), blink 0.5s step-end infinite;
         }
 
         .hero p {
@@ -111,11 +121,27 @@
             text-decoration: none;
             font-weight: 600;
             border-radius: 50px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .hero a:hover {
             background-color: #e67e22;
+            transform: translateY(-5px);
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
         }
 
         .about-section {
@@ -161,53 +187,46 @@
         }
 
         .featured-gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transform: scale(1.2) rotate(-2deg);
+            filter: brightness(1.2);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
         }
 
-        .lightbox {
-            display: none;
+        .dark-mode-toggle {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-        }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 80%;
-            border-radius: 10px;
-        }
-
-        .lightbox:target {
-            display: flex;
-        }
-
-        .lightbox-close {
-            position: absolute;
             top: 20px;
-            right: 30px;
+            right: 20px;
+            background-color: #f39c12;
             color: white;
-            font-size: 2rem;
-            text-decoration: none;
-            z-index: 1001;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: #e67e22;
         }
 
         footer {
             background-color: #121212;
             color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 40px 20px;
         }
 
         footer p {
             font-size: 0.9rem;
             margin: 0;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
     </style>
 </head>
@@ -219,14 +238,18 @@
             <a href="gallery.html">Gallery</a>
             <div class="social-icons">
                 <a href="https://www.instagram.com/ossomagazine/" target="_blank">
-                    <img src="https://imgur.com/O4wcDfV.png" alt="Instagram">
+                    <img src="https://imgs.search.brave.com/Rc78o56j5u_3UTro6q-YVykyAqwIVFzw5DPUEYuR0DU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODBiNTdmY2Q5OTk2/ZTI0YmM0M2M1MjEu/cG5n" alt="Instagram">
                 </a>
                 <a href="https://x.com/osso_magazine" target="_blank">
-                    <img src="https://imgur.com/O4wcDfV.png" alt="Twitter/X">
+                    <img src="https://imgs.search.brave.com/B6vwk9ItpE_OLonUNPFsN6SwMzKcwjW-YXgCvf6jzog/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmVl/bG9nb3BuZy5jb20v/aW1hZ2VzL2FsbF9p/bWcvMTY5MDY0MzU5/MXR3aXR0ZXIteC1s/b2dvLXBuZy5wbmc" alt="Twitter/X">
                 </a>
             </div>
         </nav>
     </header>
+
+    <button class="dark-mode-toggle">Toggle Dark Mode</button>
+
+    <div id="particles-js"></div>
 
     <section class="hero">
         <h1>Unleashing Creativity</h1>
@@ -251,36 +274,23 @@
             <a href="#lightbox-5"><img src="https://imgur.com/BAmh6Oh.png" alt="Artwork 5"></a>
             <a href="#lightbox-6"><img src="https://imgur.com/phSgyz2.png" alt="Artwork 6"></a>
         </div>
-
-        <!-- Lightbox Overlays -->
-        <div id="lightbox-1" class="lightbox">
-            <a href="#" class="lightbox-close">×</a>
-            <img src="https://imgur.com/xZkL5hl.png" alt="Artwork 1">
-        </div>
-        <div id="lightbox-2" class="lightbox">
-            <a href="#" class="lightbox-close">×</a>
-            <img src="https://imgur.com/ATgdprN.png" alt="Artwork 2">
-        </div>
-        <div id="lightbox-3" class="lightbox">
-            <a href="#" class="lightbox-close">×</a>
-            <img src="https://imgur.com/ea0awab.png" alt="Artwork 3">
-        </div>
-        <div id="lightbox-4" class="lightbox">
-            <a href="#" class="lightbox-close">×</a>
-            <img src="https://imgur.com/kn7v3ce.png" alt="Artwork 4">
-        </div>
-        <div id="lightbox-5" class="lightbox">
-            <a href="#" class="lightbox-close">×</a>
-            <img src="https://imgur.com/BAmh6Oh.png" alt="Artwork 5">
-        </div>
-        <div id="lightbox-6" class="lightbox">
-            <a href="#" class="lightbox-close">×</a>
-            <img src="https://imgur.com/phSgyz2.png" alt="Artwork 6">
-        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Osso Magazine. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // Initialize Dark Mode Toggle
+        const toggleButton = document.querySelector('.dark-mode-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Initialize Particles.js
+        particlesJS.load('particles-js', 'https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.json', function() {
+            console.log('Particles loaded');
+        });
+    </script>
 </body>
 </html>
