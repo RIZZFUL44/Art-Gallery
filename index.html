@@ -77,16 +77,16 @@
             align-items: center;
         }
 
-        .hero h1 {
+.hero h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     margin: 0;
     letter-spacing: 2px;
     white-space: nowrap;
     overflow: hidden;
-    width: fit-content; /* Makes sure the animation width matches text */
+    width: fit-content;
     border-right: 2px solid #adb5bd;
-    animation: typing 3.5s steps(30, end), blink 0.5s step-end infinite;
+    animation: typing 3.5s steps(30, end), blink 0.5s step-end 3.5s; /* Stops blink after typing ends */
 }
 
         .hero p {
@@ -110,17 +110,20 @@
             transform: translateY(-5px);
         }
 
-        @keyframes typing {
+@keyframes typing {
     from {
         width: 0;
     }
     to {
-        width: 100%; /* Ensure width stops at 100% of the text container */
+        width: 100%;
     }
 }
 
 @keyframes blink {
-    50% {
+    0%, 50% {
+        border-color: #adb5bd;
+    }
+    100% {
         border-color: transparent;
     }
 }
@@ -240,18 +243,6 @@
         <a href="gallery.html" class="cta-button">Explore the Full Gallery</a>
     </section>
 
-
-    <section class="about-section">
-        <div class="container">
-            <h2>About Osso Magazine</h2>
-            <p>
-                Osso Magazine is an Italian creation born from a love of raw beauty and creativity. Inspired by Italy’s rich artistic heritage, it highlights bold ideas in art, design, music, film, and literature. Every feature reflects a passion for stories and visuals that provoke thought and spark curiosity.<br><br>
-                Rooted in connecting artists and audiences, we showcase everything from striking illustrations to innovative designs, always with the goal of inspiring and challenging perspectives. Collaborating with creators worldwide, Osso is a platform where creativity thrives and ideas come to life.<br><br>
-                At its heart, Osso Magazine celebrates art that speaks to the soul. Proudly Italian, it’s a space for those who love creativity in its purest and most inspiring form. Welcome to Osso.
-            </p>
-        </div>
-    </section>
-
     <section class="container">
         <h2 style="text-align: center; font-weight: 600; margin-bottom: 40px;">Featured Gallery</h2>
         <div class="featured-gallery">
@@ -289,7 +280,16 @@
             <img src="https://imgur.com/phSgyz2.png" alt="Artwork 6">
         </div>
     </section>
-
+    <section class="about-section">
+        <div class="container">
+            <h2>About Osso Magazine</h2>
+            <p>
+                Osso Magazine is an Italian creation born from a love of raw beauty and creativity. Inspired by Italy’s rich artistic heritage, it highlights bold ideas in art, design, music, film, and literature. Every feature reflects a passion for stories and visuals that provoke thought and spark curiosity.<br><br>
+                Rooted in connecting artists and audiences, we showcase everything from striking illustrations to innovative designs, always with the goal of inspiring and challenging perspectives. Collaborating with creators worldwide, Osso is a platform where creativity thrives and ideas come to life.<br><br>
+                At its heart, Osso Magazine celebrates art that speaks to the soul. Proudly Italian, it’s a space for those who love creativity in its purest and most inspiring form. Welcome to Osso.
+            </p>
+        </div>
+    </section>
     <footer>
         <p>&copy; 2024 Osso Magazine. All Rights Reserved.</p>
     </footer>
