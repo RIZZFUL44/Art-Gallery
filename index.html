@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Osso Magazine - Gallery</title>
     
-    <!-- Open Graph Meta Tags (for Facebook, LinkedIn, etc.) -->
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Osso Magazine - Gallery of Creativity">
     <meta property="og:description" content="Contemporary Italian magazine: bringing the best of illustration, art, design, and graphics. Dive into Osso Magazine's curated gallery of creativity.">
-    <meta property="og:image" content="https://imgur.com/O4wcDfV.png"> <!-- Replace with your updated banner image -->
+    <meta property="og:image" content="https://imgur.com/O4wcDfV.png">
     <meta property="og:url" content="https://www.ossomagazine.com/gallery">
     <meta property="og:type" content="website">
 
@@ -16,226 +16,153 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Osso Magazine - Gallery of Creativity">
     <meta name="twitter:description" content="Contemporary Italian magazine showcasing the best of art and design. Explore Osso's curated gallery for inspiration and bold visuals.">
-    <meta name="twitter:image" content="https://imgur.com/O4wcDfV.png"> <!-- Same updated banner image -->
+    <meta name="twitter:image" content="https://imgur.com/O4wcDfV.png">
     <meta name="twitter:site" content="@osso_magazine">
-    
+
     <!-- Favicon -->
     <link rel="icon" href="https://imgur.com/O4wcDfV.png">
-</head>
-    
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
     <style>
-        /* General Styling */
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
-            background-color: #f8f9fa; /* Light modern gray */
-            color: #343a40; /* Dark modern gray */
-        }
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #121212; /* Sleek black */
-    padding: 20px 40px;
-    color: white; /* White text for contrast */
-}
-
-header img {
-    height: 60px;
-    border-radius: 50%;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-nav {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-nav a {
-    color: white; /* White text for readability */
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #ff6f61; /* Coral accent on hover */
-}
-
-.social-icons img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: white; /* Background for icons */
-    padding: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.social-icons img:hover {
-    transform: scale(1.1);
-    background-color: #ff6f61; /* Coral hover effect */
-}
-
-.hero {
-    text-align: center;
-    background: url('https://imgur.com/p0AJZtn.png') no-repeat center center/cover;
-    color: white;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Adjust opacity for text contrast */
-    z-index: 1;
-}
-
-.hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    margin: 0;
-    letter-spacing: 2px;
-    white-space: nowrap;
-    overflow: hidden;
-    max-width: 16ch; /* Limit to a specific character width */
-    border-right: 2px solid #adb5bd;
-    animation: typing 3s steps(16, end), blink 0.5s step-end 4s forwards; /* Cursor disappears after typing */
-    z-index: 2; /* Ensure text appears above the overlay */
-}
-
-.hero p {
-    margin: 20px 0;
-    font-size: 1.2rem;
-    opacity: 0.9;
-    z-index: 2; /* Ensure text appears above the overlay */
-}
-
-.hero a {
-    padding: 15px 30px;
-    background-color: #007bff; /* Modern blue */
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 50px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    z-index: 2; /* Ensure button appears above the overlay */
-}
-
-.hero a:hover {
-    background-color: #0056b3; /* Darker blue */
-    transform: translateY(-5px);
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 16ch; /* Matches the max-width of the h1 */
-    }
-}
-
-@keyframes blink {
-    0%, 50% {
-        border-color: #adb5bd; /* Cursor is visible */
-    }
-    100% {
-        border-color: transparent; /* Cursor disappears */
-    }
-}
-
-        .about-section {
             background-color: #f8f9fa;
-            padding: 40px 20px;
-        }
-
-        .about-section h2 {
-            font-size: 2rem;
-            text-align: center;
-            margin-bottom: 20px;
             color: #343a40;
         }
 
-        .about-section p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            text-align: center;
-            color: #495057;
-            max-width: 800px;
-            margin: 0 auto;
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #121212; /* Black navbar */
+            padding: 20px 40px;
+            color: white;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 40px 20px;
-        }
-
-        .featured-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .featured-gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        header img {
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .featured-gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1;
+            margin: 0 20px;
         }
 
-        .lightbox {
-            display: none;
-            position: fixed;
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6f61; /* Coral accent on hover */
+        }
+
+        .center-text {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: white;
+            padding: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
+            background-color: #ff6f61;
+        }
+
+        .hero {
+            text-align: center;
+            background: url('https://imgur.com/p0AJZtn.png') no-repeat center center/cover;
+            color: white;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
         }
 
-        .lightbox img {
-            max-width: 90%;
-            max-height: 80%;
-            border-radius: 10px;
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 16ch;
+            border-right: 2px solid #adb5bd;
+            animation: typing 3s steps(16, end), blink 0.5s step-end 4s forwards;
+            z-index: 2;
         }
 
-        .lightbox:target {
-            display: flex;
+        .hero p {
+            margin: 20px 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+            z-index: 2;
         }
 
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
+        .hero a {
+            padding: 15px 30px;
+            background-color: #007bff;
             color: white;
-            font-size: 2rem;
             text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            z-index: 2;
+        }
+
+        .hero a:hover {
+            background-color: #0056b3;
+            transform: translateY(-5px);
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 16ch;
+            }
+        }
+
+        @keyframes blink {
+            0%, 50% {
+                border-color: #adb5bd;
+            }
+            100% {
+                border-color: transparent;
+            }
         }
 
         footer {
@@ -252,21 +179,22 @@ nav a:hover {
     </style>
 </head>
 <body>
-<header>
-    <a href="index.html"><img src="https://imgur.com/O4wcDfV.png" alt="Osso Magazine Logo"></a>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/ossomagazine/" target="_blank">
-                <img src="https://imgs.search.brave.com/Rc78o56j5u_3UTro6q-YVykyAqwIVFzw5DPUEYuR0DU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODBiNTdmY2Q5OTk2/ZTI0YmM0M2M1MjEu/cG5n" alt="Instagram">
-            </a>
-            <a href="https://x.com/osso_magazine" target="_blank">
-                <img src="https://imgs.search.brave.com/B6vwk9ItpE_OLonUNPFsN6SwMzKcwjW-YXgCvf6jzog/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmVl/bG9nb3BuZy5jb20v/aW1hZ2VzL2FsbF9p/bWcvMTY5MDY0MzU5/MXR3aXR0ZXIteC1s/b2dvLXBuZy5wbmc" alt="Twitter">
-            </a>
-        </div>
-    </nav>
-</header>
+    <header>
+        <a href="index.html"><img src="https://imgur.com/O4wcDfV.png" alt="Osso Magazine Logo"></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <span class="center-text">Welcome to Osso Magazine</span>
+            <a href="gallery.html">Gallery</a>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/ossomagazine/" target="_blank">
+                    <img src="https://imgs.search.brave.com/Rc78o56j5u_3UTro6q-YVykyAqwIVFzw5DPUEYuR0DU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODBiNTdmY2Q5OTk2/ZTI0YmM0M2M1MjEu/cG5n" alt="Instagram">
+                </a>
+                <a href="https://x.com/osso_magazine" target="_blank">
+                    <img src="https://imgs.search.brave.com/B6vwk9ItpE_OLonUNPFsN6SwMzKcwjW-YXgCvf6jzog/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmVl/bG9nb3BuZy5jb20v/aW1hZ2VzL2FsbF9p/bWcvMTY5MDY0MzU5/MXR3aXR0ZXIteC1s/b2dvLXBuZy5wbmc" alt="Twitter">
+                </a>
+            </div>
+        </nav>
+    </header>
 
     <section class="hero">
         <h1>OSSO Magazine.</h1>
@@ -274,53 +202,6 @@ nav a:hover {
         <a href="gallery.html" class="cta-button">Explore the Full Gallery</a>
     </section>
 
-    <section class="container">
-        <h2 style="text-align: center; font-weight: 600; margin-bottom: 40px;">Featured Gallery</h2>
-        <div class="featured-gallery">
-            <a href="#lightbox-1"><img src="https://imgur.com/xZkL5hl.png" alt="Artwork 1"></a>
-            <a href="#lightbox-2"><img src="https://imgur.com/ATgdprN.png" alt="Artwork 2"></a>
-            <a href="#lightbox-3"><img src="https://imgur.com/ea0awab.png" alt="Artwork 3"></a>
-            <a href="#lightbox-4"><img src="https://imgur.com/kn7v3ce.png" alt="Artwork 4"></a>
-            <a href="#lightbox-5"><img src="https://imgur.com/BAmh6Oh.png" alt="Artwork 5"></a>
-            <a href="#lightbox-6"><img src="https://imgur.com/phSgyz2.png" alt="Artwork 6"></a>
-        </div>
-
-        <!-- Lightbox Overlays -->
-        <div id="lightbox-1" class="lightbox">
-            <a href="#" class="lightbox-close">×</a>
-            <img src="https://imgur.com/xZkL5hl.png" alt="Artwork 1">
-        </div>
-        <div id="lightbox-2" class="lightbox">
-            <a href="#" class="lightbox-close">×</a>
-            <img src="https://imgur.com/ATgdprN.png" alt="Artwork 2">
-        </div>
-        <div id="lightbox-3" class="lightbox">
-            <a href="#" class="lightbox-close">×</a>
-            <img src="https://imgur.com/ea0awab.png" alt="Artwork 3">
-        </div>
-        <div id="lightbox-4" class="lightbox">
-            <a href="#" class="lightbox-close">×</a>
-            <img src="https://imgur.com/kn7v3ce.png" alt="Artwork 4">
-        </div>
-        <div id="lightbox-5" class="lightbox">
-            <a href="#" class="lightbox-close">×</a>
-            <img src="https://imgur.com/BAmh6Oh.png" alt="Artwork 5">
-        </div>
-        <div id="lightbox-6" class="lightbox">
-            <a href="#" class="lightbox-close">×</a>
-            <img src="https://imgur.com/phSgyz2.png" alt="Artwork 6">
-        </div>
-    </section>
-    <section class="about-section">
-        <div class="container">
-            <h2>About Osso Magazine</h2>
-            <p>
-                Osso Magazine is an Italian creation born from a love of raw beauty and creativity. Inspired by Italy’s rich artistic heritage, it highlights bold ideas in art, design, music, film, and literature. Every feature reflects a passion for stories and visuals that provoke thought and spark curiosity.<br><br>
-                Rooted in connecting artists and audiences, we showcase everything from striking illustrations to innovative designs, always with the goal of inspiring and challenging perspectives. Collaborating with creators worldwide, Osso is a platform where creativity thrives and ideas come to life.<br><br>
-                At its heart, Osso Magazine celebrates art that speaks to the soul. Proudly Italian, it’s a space for those who love creativity in its purest and most inspiring form. Welcome to Osso.
-            </p>
-        </div>
-    </section>
     <footer>
         <p>&copy; 2024 Osso Magazine. All Rights Reserved.</p>
     </footer>
